@@ -1,0 +1,43 @@
+$textColor : #495575;
+
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+
+    .logo{
+        width: 150px;
+    }
+
+    .navbar-menu{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        color: $textColor;
+        font-size: 18px ;
+    }
+
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    button{
+        text-transform: capitalize;
+        background: transparent;
+        color: #495575;
+        font-size: 16px;
+        border: 1px solid tomato;
+        padding: 10px 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            background-color: rgb(255, 224, 218);
+        }
+    }
+}
