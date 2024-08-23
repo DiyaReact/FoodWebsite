@@ -1,31 +1,46 @@
 $textColor : #495575;
 
-.navbar{
+.navbar {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
 
-    .logo{
+    .logo {
         width: 150px;
     }
 
-    .navbar-menu{
-        display: flex;
-        list-style: none;
-        gap: 20px;
-        color: $textColor;
-        font-size: 18px ;
+    .navbar-menu {
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            color: $textColor;
+            font-size: 18px;
+        }
     }
 
-    .navbar-right{
+    .navbar-right {
         display: flex;
         align-items: center;
         gap: 40px;
+
+        .basket{position: relative;
+            .dot{
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 50px;
+                background-color: tomato;
+                right: -10px;
+                top: -7px;
+            }
+        }
     }
 
-    button{
+    button {
         text-transform: capitalize;
         background: transparent;
         color: #495575;
@@ -36,8 +51,13 @@ $textColor : #495575;
         cursor: pointer;
         transition: 0.3s;
 
-        &:hover{
+        &:hover {
             background-color: rgb(255, 224, 218);
         }
+    }
+
+    .active{
+        padding-bottom: 2px;
+        border-bottom: 2px solid $textColor;
     }
 }
