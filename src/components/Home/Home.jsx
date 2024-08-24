@@ -6,6 +6,7 @@ const Home = () => {
     const [category, setCategory] = useState("All")
     return(
         <>
+        
         <section className='main-banner'>
             <div className="content">
                 <h2>order your favourite food here</h2>

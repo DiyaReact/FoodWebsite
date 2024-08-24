@@ -7,5 +7,5 @@ import StoreContextProvider from './context/StoreContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StoreContextProvider>
     <App />
-  </StoreContextProvider>,
+  </StoreContextProvider>, 
 )
