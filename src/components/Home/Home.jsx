@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import './home.scss';
 import { menu_list } from "../../assets/assets";
 
 const Home = () => {
+    const [category, setCategory] = useState("All")
     return(
         <>
+        
         <section className='main-banner'>
             <div className="content">
                 <h2>order your favourite food here</h2>
@@ -20,8 +22,8 @@ const Home = () => {
             <div className="explore-menu-list">
                 {menu_list.map((item, index) => {
                     return(
-                        <div key={index} className="explore-menu-list-item">
-                              <img src={item.menu_image} alt="menu-img"/>
+                        <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={index} className="explore-menu-list-item">
+                              <img className={category === item.menu_name?"active":""} src={item.menu_image} alt="menu-img"/>
                               <p>{item.menu_name}</p>
                         </div>
                     )
@@ -29,7 +31,7 @@ const Home = () => {
 
                 }
             </div>
-        
+             <hr/>
         </section>
         </>
     )
