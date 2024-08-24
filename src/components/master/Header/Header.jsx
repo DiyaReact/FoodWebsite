@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss'
 import { assets } from '../../../assets/assets';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+    const [menu, setMenu] = useState("home");
     return (
         <>
             <div className='navbar'>
@@ -11,16 +13,16 @@ const Header = () => {
                 <div className='navbar-menu'>
                 <ul className='navbar-nav'>
                         <li className='nav-item'>
-                                <Link to='/' className='nav-link'>home</Link>
+                                <Link onClick={()=>setMenu("home")}className={menu==='home'?'active':''}>home</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link to='/about' className='nav-link'>menu</Link>
+                                <Link onClick={()=>setMenu("menu")}className={menu==='menu'?'active':''}>menu</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link to='' className='nav-link'>about the tomato</Link>
+                                <Link onClick={()=>setMenu("about-the-hotel")}className={menu==='about-the-hotel'?'active':''}>about the tomato</Link>
                             </li>
                             <li className='nav-item'>
-                                <Link to='/contact' className='nav-link'>Contact Us</Link>
+                                <Link onClick={()=>setMenu("contact-us")}className={menu==='contact-us'?'active':''}>Contact Us</Link>
                             </li>
                         </ul>
                 </div>

@@ -1,0 +1,70 @@
+.heading{
+    color: #262626;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.sub-text{
+    color: #808080;
+    text-align: center;
+}
+
+.main-banner{
+  height: 34vw;
+  margin: 30px auto;
+  height: 550px;
+  background: url('/src/assets/header_img.png') no-repeat;
+  background-size: contain;
+  position: relative;
+
+  .content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    bottom: 15%;
+    width: 55%;
+    left: 6vw;
+    animation: fadeIn 3s;
+    text-transform: capitalize;
+
+    h2{
+      color: #fff;
+      font-weight: 500;
+      font-size: max(4.5vw,22px);
+    }
+
+    p{
+        color: #fff;
+        font-size: 1vw;
+    }
+    button{
+        width: 10vw;
+        border: none;
+        color: #232323;
+        font-weight: 500;
+        padding: 20px;
+        background-color: #fff;
+        font-size: max(1vw, 13px);
+        border-radius: 50px;
+
+    }
+  }
+}
+
+.explore-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .explore-menu-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        margin: 20px 0;
+        overflow: scroll;
+    }
+}
