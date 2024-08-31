@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import './home.scss';
-import { menu_list } from "../../assets/assets";
+import { food_list, menu_list } from "../../assets/assets";
+import FoodDisplay from "../FoodDisplay/FoodDisplay";
 
 const Home = () => {
     const [category, setCategory] = useState("All")
+
+
+    // const {allStates} = useStatesContext()
+
     return(
         <>
         
@@ -32,8 +37,12 @@ const Home = () => {
                 }
             </div>
              <hr/>
+             {/* careate prop with food_list */}
+             <FoodDisplay food_list={food_list} />
         </section>
+
         </>
+       
     )
 }
 
