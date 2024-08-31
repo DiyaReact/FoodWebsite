@@ -5,7 +5,7 @@ import './index.css'
 import StoreContextProvider from './context/StoreContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StoreContextProvider>
+  // <StoreContextProvider>
     <App />
-  </StoreContextProvider>, 
+  // </StoreContextProvider>
 )

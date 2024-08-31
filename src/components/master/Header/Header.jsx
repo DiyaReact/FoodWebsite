@@ -2,10 +2,22 @@ import React, { useState } from 'react';
 import './Header.scss'
 import { assets } from '../../../assets/assets';
 import { Link } from 'react-router-dom';
+import { useStatesContext } from '../../../context/StoreContext';
 
 const Header = () => {
 
     const [menu, setMenu] = useState("home");
+
+
+    // const {allStates} = useStatesContext()
+    
+//  console.log("diya pgl h", allStates);
+
+// const functionPass=()=>{
+//     allStates.setMenu2("Diya Jain");
+// }
+    
+// console.log("Parveen",allStates.menu1)
     return (
         <>
             <div className='navbar'>
@@ -32,6 +44,7 @@ const Header = () => {
                         <img src={assets.basket_icon} alt='basket-icon' />
                         <div className='dot'></div>
                     </div>
+                    {/* <button onClick={()=> functionPass() }>sign in</button> */}
                     <button>sign in</button>
                 </div>
             </div>
